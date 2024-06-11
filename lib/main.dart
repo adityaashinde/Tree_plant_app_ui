@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tree_plant_app_ui/view/screen1.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,11 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Tree Plant App UI!'),
-        ),
-      ),
+      home: Screen1(),
     );
   }
 }
