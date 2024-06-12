@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Screen1 extends StatefulWidget {
-  const Screen1({super.key});
+class GetStarted extends StatefulWidget {
+  const GetStarted({super.key});
 
   @override
-  State createState() => _ScreenState();
+  State createState() => _GetStartedState();
 }
 
-class _ScreenState extends State {
+class _GetStartedState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +47,7 @@ class _ScreenState extends State {
                           style: GoogleFonts.poppins(
                             fontSize: 34.22,
                             fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(47, 47, 47, 1),
+                            color: const Color.fromRGBO(47, 47, 47, 1),
                           ),
                         ),
                         Text(
@@ -55,12 +55,59 @@ class _ScreenState extends State {
                           style: GoogleFonts.poppins(
                             fontSize: 34.22,
                             fontWeight: FontWeight.w600,
-                            color: Color.fromRGBO(47, 47, 47, 1),
+                            color: const Color.fromRGBO(47, 47, 47, 1),
                           ),
                         ),
                       ],
                     ),
                   ],
+                ),
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 14),
+                  width: double.infinity,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromRGBO(124, 180, 70, 1),
+                        Color.fromRGBO(62, 102, 24, 1),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.15),
+                        offset: Offset(0, 20),
+                        blurRadius: 40,
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Get Started",
+                        style: GoogleFonts.rubik(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      const Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        size: 16,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
