@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tree_plant_app_ui/view/login_screen.dart';
 
 class GetStarted extends StatefulWidget {
   const GetStarted({super.key});
@@ -64,7 +65,12 @@ class _GetStartedState extends State {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()));
+                },
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 14),
                   width: double.infinity,
@@ -73,8 +79,8 @@ class _GetStartedState extends State {
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
-                        Color.fromRGBO(124, 180, 70, 1),
                         Color.fromRGBO(62, 102, 24, 1),
+                        Color.fromRGBO(124, 180, 70, 1),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(10),
