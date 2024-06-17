@@ -65,11 +65,14 @@ class _GetStartedState extends State {
                 ),
               ),
               GestureDetector(
+                /// Navigate to the get_started page to login_screen page.
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginScreen()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
                 },
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 14),
