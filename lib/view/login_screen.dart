@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tree_plant_app_ui/view/verification_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -20,46 +21,44 @@ class _LoginScreenState extends State {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                child: Stack(
-                  children: [
-                    Container(
-                      height: 128,
-                      width: 128,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: const Color.fromRGBO(204, 211, 196, 1),
-                          width: 2,
-                        ),
+              Stack(
+                children: [
+                  Container(
+                    height: 128,
+                    width: 128,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color.fromRGBO(204, 211, 196, 1),
+                        width: 2,
                       ),
                     ),
-                    Container(
-                      width: 77,
-                      height: 77,
-                      margin: const EdgeInsets.only(top: 25, left: 105),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: const Color.fromRGBO(204, 211, 196, 1),
-                          width: 2,
-                        ),
+                  ),
+                  Container(
+                    width: 77,
+                    height: 77,
+                    margin: const EdgeInsets.only(top: 25, left: 105),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color.fromRGBO(204, 211, 196, 1),
+                        width: 2,
                       ),
                     ),
-                    Container(
-                      height: 51,
-                      width: 51,
-                      margin: const EdgeInsets.only(top: 80, left: 150),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: const Color.fromRGBO(204, 211, 196, 1),
-                          width: 2,
-                        ),
+                  ),
+                  Container(
+                    height: 51,
+                    width: 51,
+                    margin: const EdgeInsets.only(top: 80, left: 150),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: const Color.fromRGBO(204, 211, 196, 1),
+                        width: 2,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               Container(
                 width: double.infinity,
@@ -109,7 +108,15 @@ class _LoginScreenState extends State {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  /// Navigate to the login_screen to the verification_screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VerificationScreen(),
+                    ),
+                  );
+                },
                 child: Container(
                   margin: const EdgeInsets.only(left: 14, right: 14),
                   height: 50,
@@ -145,7 +152,7 @@ class _LoginScreenState extends State {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 50),
+                margin: const EdgeInsets.only(top: 50),
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: Image.network(
