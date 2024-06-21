@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tree_plant_app_ui/view/home_screen.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -209,7 +210,15 @@ class _VerificationState extends State {
                 ],
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  /// Navigate to verification_screen to home_screen page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
                 child: Container(
                   height: 50,
                   width: double.infinity,
